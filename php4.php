@@ -130,7 +130,7 @@ class ColdBlooded extends Vertebrates {
     }
 }
 
-class Fish extends ColdBlooded {
+class Fishes extends ColdBlooded {
 
     protected function sonoPesce() {
         echo "SPLASH!\n";
@@ -166,12 +166,15 @@ class Amphibians extends ColdBlooded {
     }
 }
 
-$luccio = new Fish();
+$luccio = new Fishes();
 $crotalo = new Reptiles();
+$mucca = new Mammals();
+$piccione = new Birds();
+$raganella = new Amphibians();
 
-var_dump($luccio);
 
-//$luccio->cosaSono();
+
+
 
 
 
