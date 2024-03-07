@@ -71,6 +71,108 @@
 
 //TRACCIA 2
 
+class Vertebrates {
+
+    protected function cosaSono() {
+        echo "Sono un animale vertebrato\n";
+    }
+
+    public function __construct() {
+        $this->cosaSono();
+    }
+}
+
+class WarmBlooded extends Vertebrates {
+
+    protected function sonoASangueCaldo() {
+        echo "Sono un animale a sangue caldo\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoASangueCaldo();
+    }
+}
+
+class Mammals extends WarmBlooded {
+
+    protected function sonoMammifero() {
+        echo "Allatto i miei cuccioli\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoMammifero();
+    }
+}
+
+class Birds extends WarmBlooded {
+
+    protected function sonoUccello() {
+        echo "Depongo uova!\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoUccello();
+    }
+}
+
+class ColdBlooded extends Vertebrates {
+
+    protected function sonoASangueFreddo() {
+        echo "Sono un animale a sangue freddo\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoASangueFreddo();
+    }
+}
+
+class Fish extends ColdBlooded {
+
+    protected function sonoPesce() {
+        echo "SPLASH!\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoPesce();
+    }
+}
+
+class Reptiles extends ColdBlooded {
+
+    protected function sonoRettile() {
+        echo "Striscio, mordo e sono velenossssssso\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoRettile();
+    }
+}
+
+class Amphibians extends ColdBlooded {
+
+    protected function sonoAnfibio() {
+        echo "Quanto mi piace rimanere umido!\n";
+    }
+
+    protected function cosaSono() {
+        parent::cosaSono();
+        $this->sonoAnfibio();
+    }
+}
+
+$luccio = new Fish();
+$crotalo = new Reptiles();
+
+var_dump($luccio);
+
+//$luccio->cosaSono();
+
 
 
 
